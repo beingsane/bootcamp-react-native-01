@@ -1,0 +1,3 @@
+rootProject.name = 'GoNativeModulo01'
+
+include ':app'
