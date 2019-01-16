@@ -1,10 +1,10 @@
 import '~/config/ReactotronConfig';
 import '~/config/DevToolsConfig';
-import React, { Component } from 'react';
+import React from 'react';
 
 import { View, StyleSheet } from 'react-native';
 
-import Todo from '~/components/Todo';
+import Todo from '~/components/Todo.ios';
 
 const bgColor = '#333';
 
