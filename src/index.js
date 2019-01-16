@@ -1,13 +1,12 @@
-import './src/config/ReactotronConfig';
+import '~/config/ReactotronConfig';
+import '~/config/DevToolsConfig';
+import React, { Component } from 'react';
 
-import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import TodoList from '~/components/TodoList';
+import Todo from '~/components/Todo';
 
-console.tron.log('Hello World');
-
-const bgColor = '#f5f5f5';
+const bgColor = '#333';
 
 const styles = StyleSheet.create({
   container: {
@@ -20,7 +19,8 @@ const styles = StyleSheet.create({
 
 const App = () => (
   <View style={styles.container}>
-    <TodoList />
+    <Todo title="Fazer café" />
+    <Todo title="Estudar o GoNative" />
   </View>
 );
 
