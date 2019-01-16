@@ -21,11 +21,13 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.state.usuario}</Text>
-        {this.state.todos.map(todo => (
-          <Todo key={todo.id} title={todo.text} />
-        ))}
-        <Button title="Adicionar Todo" onPress={this.addTodo} />
+        <View style={styles.box} />
+        <View style={styles.box} />
+        <View style={styles.box} />
+        <View style={styles.box} />
+        <View style={styles.box}>
+          <Text style={styles.boxText}>Oi</Text>
+        </View>
       </View>
     );
   }
@@ -34,8 +36,22 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#333",
+    flexDirection: "row",
+    flexWrap: "wrap",
     justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#f5f5f5"
+    alignContent: "center"
+  },
+
+  box: {
+    backgroundColor: "#f00",
+    width: 80,
+    height: 80,
+    margin: 10,
+    transform: [{ rotateZ: "20deg" }]
+  },
+
+  boxText: {
+    color: "#fff"
   }
 });
