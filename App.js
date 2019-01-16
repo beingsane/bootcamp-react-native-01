@@ -1,21 +1,21 @@
-import "./src/config/ReactotronConfig";
+import './src/config/ReactotronConfig';
 
-import React, { Component } from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
 
-console.tron.log("Hello World");
+console.tron.log('Hello World');
 
-export default class App extends Component {
-  render() {
-    return <View style={styles.container} />;
-  }
-}
+const bgColor = '#f5f5f5';
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: 'center',
+    backgroundColor: bgColor,
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#f5f5f5"
-  }
+    justifyContent: 'center',
+  },
 });
+
+const App = () => <View style={styles.container} />;
+
+export default App;
